@@ -1,28 +1,28 @@
 <?php
 
 $dbParams = array(
-	'database'  => 'playground',
-	'username'  => 'root',
-	'password'  => 'root',
-	'hostname'  => 'localhost',
-	'port'		=> '3306',
-	'charset'	=> 'utf8',
-	'driverOptions' => array(
-		1002 => 'SET NAMES utf8',
-	),
+    'database'  => 'playground',
+    'username'  => 'root',
+    'password'  => 'root',
+    'hostname'  => 'localhost',
+    'port'      => '3306',
+    'charset'   => 'utf8',
+    'driverOptions' => array(
+        1002 => 'SET NAMES utf8',
+    ),
 );
 
 return array(
-	'design' => array(
-		'admin' => array(
-			'package' => 'default',
-			'theme' => 'base',
-		),
-		'frontend' => array(
-			'package' => 'default',
-			'theme' => 'base',
-		),
-	),
+    'design' => array(
+        'admin' => array(
+            'package' => 'default',
+            'theme' => 'base',
+        ),
+        'frontend' => array(
+            'package' => 'default',
+            'theme' => 'base',
+        ),
+    ),
     // The directory of the application
     'applicationDirectory' => 'playground',
     // Licence keys and api keys
@@ -52,25 +52,25 @@ return array(
                     'user'     => $dbParams['username'],
                     'password' => $dbParams['password'],
                     'dbname'   => $dbParams['database'],
-                	'charset'  => $dbParams['charset'],
-                	'driverOptions' => $dbParams['driverOptions'],
+                    'charset'  => $dbParams['charset'],
+                    'driverOptions' => $dbParams['driverOptions'],
                 )
             )
         ),
     ),
-	'service_manager' => array(
-		'factories' => array(
-			'Zend\Db\Adapter\Adapter' => function ($sm) use ($dbParams) {
-				return new Zend\Db\Adapter\Adapter(array(
-					'driver'    => 'pdo',
-					'dsn'       => 'mysql:dbname='.$dbParams['database'].';host='.$dbParams['hostname'],
-					'database'  => $dbParams['database'],
-					'username'  => $dbParams['username'],
-					'password'  => $dbParams['password'],
-					'hostname'  => $dbParams['hostname'],
-					'charset'   => $dbParams['charset'],
-				));
-			},
-		),
-	),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => function ($sm) use ($dbParams) {
+                return new Zend\Db\Adapter\Adapter(array(
+                    'driver'    => 'pdo',
+                    'dsn'       => 'mysql:dbname='.$dbParams['database'].';host='.$dbParams['hostname'],
+                    'database'  => $dbParams['database'],
+                    'username'  => $dbParams['username'],
+                    'password'  => $dbParams['password'],
+                    'hostname'  => $dbParams['hostname'],
+                    'charset'   => $dbParams['charset'],
+                ));
+            },
+        ),
+    ),
 );
