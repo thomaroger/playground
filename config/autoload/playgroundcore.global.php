@@ -117,6 +117,11 @@ $zenddevelopertools = array(
     ),
 );
 
+if (getenv('APPLICATION_ENV') === "development") {
+    $zenddevelopertools['toolbar']['enabled'] = true;
+    $zenddevelopertools['toolbar']['template_hint'] = true;
+}
+
 // 'Jhu\ZdtLoggerModule' config
 // $sm->get('jhu.zdt_logger')->info('my log');
 $zdt_logger = array(
