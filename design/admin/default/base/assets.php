@@ -17,6 +17,21 @@ return array(
 							'output' => 'zfcadmin/',
 						)
 					),
+					'ckeditor' => array(
+                        'assets' => array(
+                            'js/lib/ckeditor/*',
+                            'js/lib/ckeditor/**/*',
+                            'js/lib/ckeditor/**/**/*',
+                            'js/lib/ckeditor/**/**/**/*',
+                            'js/ckeditor-custom/*',
+                            'js/ckeditor-custom/**/*',
+                            'css/ckeditor-custom/*',
+                        ),
+                        'options' => array(
+                            'move_raw' => true,
+                            'output' => 'zfcadmin/',
+                        )
+                    ),
 				),
 			),
 		),
