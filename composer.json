@@ -19,7 +19,7 @@
 	],
 	"require" : {
         "php" : ">=5.3.3",
-        "zendframework/zendframework" : "2.*",
+        "zendframework/zendframework" : "2.2.6",
         "playground/cms" : "dev-develop",
         "playground/core" : "dev-master",
         "playground/design" : "dev-develop",
