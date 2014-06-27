@@ -13,7 +13,7 @@
 	<ul class="paginate-nb span8">
 		<?php foreach ($this->pagesInRange as $page): ?>
         <li<?php echo ($page == $this->current) ? ' class="active"' : ''; ?>>
-            <a href="<?php echo $this->url('frontend/winner/pagination', array('p' => $page)); ?>"><?php echo $page; ?></a>
+            <a href="<?php echo $this->url('frontend/winner/pagination', array('p' => $page, 'channel' => $this->channel)); ?>"><?php echo $page; ?></a>
         </li>
         <?php endforeach; ?>
 	</ul>
