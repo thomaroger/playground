@@ -48,6 +48,13 @@ $form->prepare();
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('voteAnonymous'))) ?>
 	        </div>
+	        <div class="form-group checkbox">
+	            <?php echo $this->formLabel($form->get('preModeration')); ?>
+	            <?php echo $this->formCheckbox($form->get('preModeration')); ?>
+	            <?php echo $this->formElementErrors()
+						->setMessageOpenFormat('<div class="alert alert-danger">')
+						->setMessageCloseString('</div>')->render($form->get(('preModeration'))) ?>
+	        </div>
         </div>
     </div>
 </div>
