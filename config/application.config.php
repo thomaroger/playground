@@ -24,9 +24,9 @@ return array(
     	'PlaygroundFlow',
     	'PlaygroundStats',
         'PlaygroundTranslate',
-   		'Application',
         'PlaygroundWeather',
-        'PlaygroundEmailCampaign'
+        'PlaygroundEmailCampaign',
+        'Application',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
