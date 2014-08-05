@@ -27,6 +27,7 @@
         "playground/faq" : "dev-develop",
         "playground/flow" : "dev-develop",
         "playground/game" : "dev-develop",
+        "playground/treasureHunt" : "dev-develop",
         "playground/partnership" : "dev-develop",
 		"playground/stats" : "dev-develop",
 		"playground/reward" : "dev-develop",
@@ -53,6 +54,10 @@
 	"repositories" : [{
 			"type" : "git",
 			"url" : "https://github.com/gregorybesson/hybridauth"
-		}
+		},
+        {
+        "type": "git",
+        "url":  "https://github.com/AdFabConnect/TreasureHunt"
+        }
 	]
 }

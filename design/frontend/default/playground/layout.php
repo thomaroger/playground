@@ -80,11 +80,6 @@ return array(
                                 'col_right' => 'playground-game/post-vote/col-postvote.phtml'
                             )
                         ),
-                        'playgroundgame_treasurehunt' => array(
-                            'children_views' => array(
-                                'col_right' => 'playground-game/lottery/col-lottery.phtml'
-                            )
-                        ),
                         'playgroundgame_prizecategory' => array(
                             'actions' => array(
                                 'index' => array(
@@ -107,6 +102,26 @@ return array(
                         )
                     )
                 ),
+                
+                'treasurehunt' => array(
+                    'layout' => 'layout/game-2columns-right.phtml',
+                    'channel' => array(
+                        'facebook' => array(
+                            'layout' => 'layout/1column-facebook.phtml'
+                        ),
+                        'embed' => array(
+                            'layout' => 'layout/1column-embed.phtml'
+                        )
+                    ),
+                    'controllers' => array(
+                        'treasurehunt_treasurehunt' => array(
+                            'children_views' => array(
+                                'col_right' => 'playground-game/lottery/col-lottery.phtml'
+                            )
+                        ),
+                    )
+                ),
+
 
                 'playgroundpartnership' => array(
                     'layout' => 'layout/2columns-left.phtml'
