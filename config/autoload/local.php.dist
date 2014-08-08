@@ -16,11 +16,11 @@ return array(
     'design' => array(
         'admin' => array(
             'package' => 'default',
-            'theme' => 'base',
+            'theme' => 'playground',
         ),
         'frontend' => array(
             'package' => 'default',
-            'theme' => 'base',
+            'theme' => 'starter',
         ),
     ),
     // Licence keys and api keys
