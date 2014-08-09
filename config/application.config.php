@@ -25,8 +25,6 @@ return array(
     	'PlaygroundFlow',
     	'PlaygroundStats',
         'PlaygroundTranslate',
-        'PlaygroundWeather',
-        'PlaygroundEmailCampaign',
         'Application',
     ),
     'module_listener_options' => array(
