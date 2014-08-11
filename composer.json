@@ -22,7 +22,7 @@
         "zendframework/zendframework" : "2.*",
         "playground/cms" : "dev-develop",
         "playground/core" : "dev-master",
-        "playground/design" : "dev-develop",
+        "playground/design" : "dev-master",
         "playground/facebook" : "dev-develop",
         "playground/faq" : "dev-develop",
         "playground/flow" : "dev-develop",
