@@ -16,7 +16,7 @@
         <module>
             <name>DESIGN</name>
             <path>vendor/playground/design</path>
-            <limit>34</limit>
+            <limit>30</limit>
             <mandatory>true</mandatory>
         </module>
         <module>
