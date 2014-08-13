@@ -19,7 +19,6 @@ return array(
     	'PlaygroundCms',
 		'PlaygroundReward',
     	'PlaygroundGame',
-        'TreasureHunt',
         'PlaygroundPartnership',
         'PlaygroundFacebook',
     	'PlaygroundFlow',
