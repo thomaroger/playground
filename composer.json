@@ -50,10 +50,6 @@
 	"repositories" : [{
 			"type" : "git",
 			"url" : "https://github.com/gregorybesson/hybridauth"
-		},
-        {
-        "type": "git",
-        "url":  "https://github.com/AdFabConnect/TreasureHunt"
-        }
+		}
 	]
 }

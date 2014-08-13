@@ -9,7 +9,7 @@
 	
 	<target name="tools-parallel" description="Run tools in parallel">
 		<antcall target="composer" />
-		<parallel threadCount="6">
+		<parallel threadCount="1">
 			<antcall target="phpmd-ci" />
 			<antcall target="phpcpd" />
 			<antcall target="phpcs-ci" />
