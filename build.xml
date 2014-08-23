@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="PLAYGROUND" default="build">
-	<target name="build" depends="prepare,composer,phpcs-ci,phpmd-ci,phpcpd,lint,docblox,phpunit-core,phpunit-application,phpunit-cms,phpunit-facebook,phpunit-faq,phpunit-flow,phpunit-game,phpunit-partnership,phpunit-reward,phpunit-user,phpcb,coverage-checker" />
+	<target name="build" depends="prepare,composer,phpcs-ci,phpmd-ci,phpcpd,lint,docblox,phpunit-core,phpunit-cms,phpunit-facebook,phpunit-faq,phpunit-flow,phpunit-game,phpunit-partnership,phpunit-reward,phpunit-user,phpcb,coverage-checker" />
 	
 	<target name="build-parallel" depends="prepare,tools-parallel" />
 	
-	<target name="phpunit" depends="phpunit-core,phpunit-application,phpunit-cms,phpunit-facebook,phpunit-faq,phpunit-flow,phpunit-game,phpunit-partnership,phpunit-reward,phpunit-user,phpunit-design" />
+	<target name="phpunit" depends="phpunit-core,phpunit-cms,phpunit-facebook,phpunit-faq,phpunit-flow,phpunit-game,phpunit-partnership,phpunit-reward,phpunit-user,phpunit-design" />
 	
 	<target name="tools-parallel" description="Run tools in parallel">
 		<antcall target="composer" />
@@ -16,7 +16,6 @@
 			<antcall target="lint" />
 			<antcall target="docblox" />
 			<antcall target="phpunit-core" />
-			<antcall target="phpunit-application" />
 			<antcall target="phpunit-cms" />
 			<antcall target="phpunit-facebook" />
 			<antcall target="phpunit-faq" />
@@ -100,11 +99,6 @@
 	<target name="phpunit-core">
 		<exec dir="${basedir}/vendor/bin" executable="phpunit" failonerror="true" description="Run unit tests with PHPUnit">
 			<arg line="-c ${basedir}/vendor/playground/core" />
-		</exec>
-	</target>
-	<target name="phpunit-application">
-		<exec dir="${basedir}/vendor/bin" executable="phpunit" failonerror="true" description="Run unit tests with PHPUnit">
-			<arg line="-c ${basedir}/module/Application" />
 		</exec>
 	</target>
 	<target name="phpunit-cms">

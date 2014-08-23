@@ -23,8 +23,7 @@ return array(
         'PlaygroundFacebook',
     	'PlaygroundFlow',
     	'PlaygroundStats',
-        'PlaygroundTranslate',
-        'Application',
+        'PlaygroundTranslate'
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
