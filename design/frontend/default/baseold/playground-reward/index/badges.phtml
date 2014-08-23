@@ -41,7 +41,7 @@
 			<div class="span8">
 				<p><b>Participer à un jeu</b> <span class="orange-points">+ 100 points</span></p>
 				<p>Participez aux jeux concours pour tenter de gagner pleins de cadeaux, et en plus vous cumulez des points !</p>
-				<p><a class="green-underline" href="<?php echo $this->url('frontend/jeuxconcours', array('channel' => $this->channel));?>">&gt; Voir les jeux en cours</a></p>
+				<p><a class="green-underline" href="<?php echo $this->url('frontend/gameslist', array('channel' => $this->channel));?>">&gt; Voir les jeux en cours</a></p>
 			</div>
 			<div class="span4">
 				<p class="big-points"><?php echo number_format($this->gamesTotal, 0, ',', ' ' ) ?> points</p>
