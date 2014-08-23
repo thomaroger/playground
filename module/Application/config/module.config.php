@@ -22,7 +22,7 @@ return array(
                         	'constraints' => array('p' => '[0-9]*'),
                         ),
                     ),*/
-                    'sponsorfriends' => array(
+                    /*'sponsorfriends' => array(
                     	'type' => 'Literal',
                     	'options' => array(
                     		'route' => 'mon-compte/sponsor-friends',
@@ -64,7 +64,7 @@ return array(
                					),
                     		),
                     	),
-                    ),
+                    ),*/
                     /*'contact' => array(
                     	'type' => 'Literal',
                     	'options' => array(
