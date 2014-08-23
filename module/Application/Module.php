@@ -54,18 +54,4 @@ class Module
         );
     }
 
-    public function getServiceConfig()
-    {
-        return array(
-            'factories' => array(
-
-                'application_contact_form' => function($sm) {
-                    $translator = $sm->get('translator');
-                      $form = new Form\Contact(null, $sm, $translator);
-
-                    return $form;
-                },
-            ),
-        );
-    }
 }

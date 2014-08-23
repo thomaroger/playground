@@ -4,14 +4,14 @@ return array(
     'router' => array(
         'routes' => array(
             'frontend' => array(
-                'options' => array(
+                /*'options' => array(
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
                     ),
-                ),
+                ),*/
                 'child_routes' => array(
-                    'pagination' => array(
+                    /*'pagination' => array(
                         'type'    => 'Segment',
                         'options' => array(
                             'route'    => '[:p]',
@@ -21,7 +21,7 @@ return array(
                             ),
                         	'constraints' => array('p' => '[0-9]*'),
                         ),
-                    ),
+                    ),*/
                     'sponsorfriends' => array(
                     	'type' => 'Literal',
                     	'options' => array(
@@ -65,7 +65,7 @@ return array(
                     		),
                     	),
                     ),
-                    'contact' => array(
+                    /*'contact' => array(
                     	'type' => 'Literal',
                     	'options' => array(
                     		'route' => 'contactez-nous',
@@ -87,11 +87,11 @@ return array(
                     			),
                     		),
                     	),
-                    ),
+                    ),*/
                 ),
             ),
 
-             'admin' => array(
+             /*'admin' => array(
                 'child_routes' => array(
                     'applicationadmin' => array(
                     'type' => 'Literal',
@@ -127,7 +127,7 @@ return array(
                         ),
                     ),
                 ),
-            ),
+            ),*/
         ),
     ),
 
@@ -212,7 +212,7 @@ return array(
         ),
     ),
     'navigation' => array(
-        'default' => array(
+        /*'default' => array(
             array(
                 'label' => 'Comment ça marche ?',
                 'route' => 'commentcamarche',
@@ -251,7 +251,7 @@ return array(
                 'controller' => 'Application\Controller\Index',
                 'action'     => 'prizecategories',
             ),
-        ),
+        ),*/
         /*'admin' => array(
             'applicationadmin' => array(
                 'label' => 'Statistiques',
