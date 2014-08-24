@@ -8,9 +8,6 @@ return array(
                 'col_left' => 'playground-user/user/col-user.phtml'
             ),
             'channel' => array(
-                'facebook' => array(
-                    'layout' => 'layout/1column-facebook.phtml',
-                ),
                 'embed' => array(
                     'layout' => 'layout/1column-embed.phtml',
                 ),
@@ -49,11 +46,7 @@ return array(
                 ),
 
                 'playgroundgame' => array(
-                	'layout' => 'layout/game-2columns-right.phtml',
                     'channel' => array(
-                        'facebook' => array(
-                            'layout' => 'layout/1column-facebook.phtml'
-                        ),
                         'embed' => array(
                             'layout' => 'layout/1column-embed.phtml'
                         )
@@ -65,7 +58,6 @@ return array(
                             )
                         ),
                         'playgroundgame_quiz' => array(
-                            //'layout' => 'layout/game-2columns-right.phtml',
                             'children_views' => array(
                                 'col_right' => 'playground-game/quiz/col-quiz.phtml'
                             )
@@ -91,7 +83,6 @@ return array(
                             )
                         ),
                         'playgroundgame' => array(
-                            'layout' => 'layout/1column-custom.phtml',
                             'children_views' => array(
                                 'col_right' => 'playground-game/quiz/col-quiz.phtml.phtml'
                             ),
@@ -106,16 +97,6 @@ return array(
 
                 'playgroundpartnership' => array(
                     'layout' => 'layout/2columns-left.phtml'
-                ),
-
-                'playgroundreward' => array(
-                    'controllers' => array(
-                        'playgroundreward' => array(
-                            'actions' => array(
-                                'layout' => 'layout/homepage-2columns-right.phtml'
-                            )
-                        )
-                    )
                 ),
 
                 'playgrounduser' => array(
@@ -136,7 +117,7 @@ return array(
                                     'layout' => 'layout/1column.phtml'
                                 ),
                                 'address' => array(
-                                    'layout' => 'layout/game-2columns-right.phtml'
+                                    'layout' => 'layout/2columns-right.phtml'
                                 )
                             )
                         ),
