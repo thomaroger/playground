@@ -46,8 +46,8 @@
     <!-- ADSERVING SIDEBAR -->
     <?php //echo $this->partial('playground-design/index/partial/col-adserving.phtml', array('cat1' => $this->cat1, 'cat2' => $this->cat2, 'cat3' => $this->cat3, 'channel' => $this->channel)); ?>
     <!-- END ADSERVING SIDEBAR -->
-
-    <?php if($this->facebookUrl()): ?>
+    
+    <?php if ($this->facebookUrl()): ?>
     <!-- BLOCK FACEBOOK -->
     <div class="sb-block fb-box">
     	<h5><?php echo $this->translate('Join us on Facebook'); ?></h5>
@@ -216,21 +216,22 @@
     	   <?php foreach($achievements as $achievement):?>
     		<li>
     			<img src="<?php
-    						if($achievement->getUser()->getAvatar()) :
+    						if($achievement->getUser() && $achievement->getUser()->getAvatar()) :
     							echo $this->basePath($achievement->getUser()->getAvatar());
-    						elseif($achievement->getUser()->getTitle() && $achievement->getUser()->getTitle() == 'M') :
+    						elseif($achievement->getUser() && $achievement->getUser()->getTitle() && $achievement->getUser()->getTitle() == 'M') :
     							echo $this->frontendAssetPath('images/user/no-avatar-small-h.png');
     						else :
     							echo $this->frontendAssetPath('images/user/no-avatar-small-f.png');
     						endif;
     					?>" width="33" height="33" border="0" alt="avatar" />
     			<span class="name">
-    			     <?php if($achievement->getUser()->getUsername()) :
-    				    	   echo $achievement->getUser()->getUsername();
-    					   else :
-    							echo $achievement->getUser()->getFirstname().' '.substr($achievement->getUser()->getLastname(), 0, 1).'.';
-    						endif;
-    				?>
+    			     <?php if($achievement->getUser()) : ?>
+    			         <?php if ($achievement->getUser()->getUsername()) : ?>
+    				    	   <?php echo $achievement->getUser()->getUsername(); ?>
+    					 <?php else : ?>
+    					       <?php echo $achievement->getUser()->getFirstname().' '.substr($achievement->getUser()->getLastname(), 0, 1).'.'; ?>
+    					 <?php endif;?>
+    				<?php endif;?>
     			</span> <?php echo $this->translate('received the badge'); ?> <?php echo $achievement->getLabel() . " " . ucfirst(strtolower($achievement->getLevelLabel()));?>
     		</li>
     		<?php endforeach;?>
