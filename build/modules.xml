@@ -61,11 +61,5 @@
             <limit>13</limit>
             <mandatory>true</mandatory>
         </module>
-        <module>
-            <name>APPLICATION</name>
-            <path>module/Application</path>
-            <limit>0</limit>
-            <mandatory>false</mandatory>
-        </module>
     </modules>
 </project>
