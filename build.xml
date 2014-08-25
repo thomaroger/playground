@@ -90,7 +90,7 @@
 		description="Generate API documentation using DocBlox">
 		<exec executable="docblox" failonerror="false">
 			<arg value="-d" />
-			<arg path="${basedir}/module" />
+			<arg path="${basedir}" />
 			<arg value="-t" />
 			<arg path="${basedir}/build/api" />
 			<arg line="--title '${ant.project.name}'" />
