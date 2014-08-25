@@ -45,6 +45,13 @@ $form->prepare();
 	            <?php echo $this->formInput($form->get('timerDuration')); ?>
 	            <?php echo $this->formElementErrors($form->get('timerDuration')) ?>
 			</div>
+			<div class="label-input">
+                <?php echo $this->formLabel($form->get('replayPuzzle')); ?>
+                <?php echo $this->formSelect($form->get(('replayPuzzle'))->setAttribute('class', 'form-control')); ?>
+                <?php echo $this->formElementErrors()
+        						->setMessageOpenFormat('<div class="alert alert-danger">')
+        						->setMessageCloseString('</div>')->render($form->get(('replayPuzzle'))) ?>
+        	</div>
         </div>
     </div>
 </div>

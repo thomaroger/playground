@@ -1,4 +1,5 @@
-<?php echo '<h3>'.$this->result->name.'</h3>'; ?>
+<?php $this->plugin('translate')->setTranslatorTextDomain('playgroundcore');?>
+<?php echo '<h3>'.$this->translate($this->result->name).'</h3>'; ?>
 
 <form action="/form" method="post" name="add_form_data" id="add_form_data" class="<?php echo $this->result->id; ?>">
 	<ul class="nav nav-list">
@@ -47,4 +48,4 @@
 	</ul>
 </form>
 
-<?php echo '<code>'.$this->result->id.'</code>'; ?>
+<?php //echo '<code>'.$this->result->id.'</code>'; ?>
