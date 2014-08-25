@@ -19,7 +19,7 @@
                     <li class="duplicate_input">
                         <input class="input-small" type="text" value="Checkbox" name="rem<?php echo $i;?>">
                         <button class="btn btn-mini" id="rem<?php echo $i;?>">remove</button>
-                        <button class="btn btn-mini" id="def<?php echo $i;?>">set default</button>
+                        <button class="btn btn-mini" id="def<?php echo $i;?>">set checkbox default</button>
                     </li>
                     <?php } ?>
                     <button class="btn btn-mini" id="add_new_checkbox_field">add new field</button>
@@ -43,9 +43,10 @@
             <input type="text" name="number_label_id" maxlength="255" placeholder="custom id">
         </li>
 		<li>
+		    <input type="hidden" id="formElementCode" value="<?php echo $this->result->id?>">
 			<br><button class="btn btn-primary" id="add_form_checkbox">Save</button>
 		</li>
 	</ul>
 </form>
 
-<?php //echo '<code>'.$this->result->id.'</code>'; ?>
+<?php echo '<code>'.$this->result->id.'</code>'; ?>
