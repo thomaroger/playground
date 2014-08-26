@@ -27,6 +27,13 @@
             </fieldset>
         </li>
         <li>
+			<label><?php echo $this->translate('Required');?></label>
+			<select name="required">
+				<option value="no"><?php echo $this->translate('No');?></option>
+				<option value="yes"><?php echo $this->translate('Yes');?></option>
+			</select>
+		</li>
+        <li>
             <label>Checkbox Input Class</label>
             <input type="text" name="number_class" maxlength="255" placeholder="class1 class2..">
         </li>
