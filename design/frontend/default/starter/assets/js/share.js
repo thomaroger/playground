@@ -2,7 +2,7 @@ $(function(){
 
 	/**************************** Homepage */
 	
-	var APP_ID =  $('meta[property="fb:app"]').attr('content');
+	var APP_ID =  $('meta[name="fb:app"]').attr('content');
 	var BIT_CLIENT = $('meta[property="bt:client"]').attr('content');
 	var BIT_USER = $('meta[property="bt:user"]').attr('content');
 	var BIT_KEY = $('meta[property="bt:key"]').attr('content');

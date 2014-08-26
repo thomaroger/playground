@@ -226,6 +226,12 @@ $form->prepare();
 	    	<img src="<?php echo $this->basePath($form->get('fbShareImage')->getValue()); ?>" />
 	    <?php endif;?>
     </div>
+    <div class="form-group">
+      <?php echo $this->formLabel($form->get('fbRequestMessage')); ?>
+      <?php echo $this->formTextarea($form->get(('fbRequestMessage'))->setAttribute('class', 'form-control')->setAttribute('row', '4')) . $this->formElementErrors()
+            ->setMessageOpenFormat('<div class="alert alert-danger">')
+            ->setMessageCloseString('</div>')->render($form->get(('fbRequestMessage'))) ?>
+    </div>
 	<div class="form-group twshare-msg">
 	    <?php echo $this->formLabel($form->get('twShareMessage')); ?>
 	    <?php echo $this->formTextarea($form->get(('twShareMessage'))->setAttribute('class', 'form-control')->setAttribute('row', '4')) . $this->formElementErrors()
