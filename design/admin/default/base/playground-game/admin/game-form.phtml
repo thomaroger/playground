@@ -80,6 +80,11 @@ $form->prepare();
         <?php echo $this->formElementErrors($form->get('anonymousAllowed')) ?>
 	</div>
 	<div class="label-input">
+        <?php echo $this->formLabel($form->get('anonymousIdentifier')); ?>
+        <?php echo $this->formInput($form->get('anonymousIdentifier')); ?>
+        <?php echo $this->formElementErrors($form->get('anonymousIdentifier')) ?>
+	</div>
+	<div class="label-input">
         <?php echo $this->formLabel($form->get('mailWinner')); ?>
         <?php echo $this->formSelect($form->get('mailWinner')); ?>
         <?php echo $this->formElementErrors($form->get('mailWinner')) ?>
