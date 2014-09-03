@@ -46,7 +46,7 @@
 			    <?php
 	            $formEmail = $this->changeEmailForm;
 	            $formEmail->prepare();
-	            $formEmail->setAttribute('action', $this->url('frontend/zfcuser/profile', array('channel' => $this->channel)));
+	            $formEmail->setAttribute('action', $this->frontendUrl('zfcuser/profile', array('channel' => $this->channel)));
 	            $formEmail->setAttribute('method', 'post');
 	            echo $this->form()->openTag($formEmail);
 			    echo $this->formInput($formEmail->get('identity'));
@@ -97,7 +97,7 @@
 				<?php
 	            $form = $this->changePasswordForm;
 	            $form->prepare();
-	            $form->setAttribute('action', $this->url('frontend/zfcuser/profile', array('channel' => $this->channel)));
+	            $form->setAttribute('action', $this->frontendUrl('zfcuser/profile', array('channel' => $this->channel)));
 	            $form->setAttribute('method', 'post');
 				$form->setAttribute('class', 'validate');
 	            $emailElement = $form->get('identity');
@@ -166,7 +166,7 @@
 	    $formInfo = $this->changeInfoForm;
 
 	    $formInfo->prepare();
-	    $formInfo->setAttribute('action', $this->url('frontend/zfcuser/profile', array('channel' => $this->channel)));
+	    $formInfo->setAttribute('action', $this->frontendUrl('zfcuser/profile', array('channel' => $this->channel)));
 	    $formInfo->setAttribute('method', 'post');
 		$formInfo->setAttribute('class', 'validate');
 
@@ -370,7 +370,7 @@
 	</div>
 	<?php
     $formPrize = $this->prizeCategoryForm;
-    $formPrize->setAttribute('action', $this->url('frontend/zfcuser/profile_prizes', array('channel' => $this->channel)));
+    $formPrize->setAttribute('action', $this->frontendUrl('zfcuser/profile_prizes', array('channel' => $this->channel)));
     $formPrize->setAttribute('method', 'post');
 
     if(($formPrize->get('prizeCategory') instanceof Zend\Form\Element\MultiCheckbox )) :
@@ -400,7 +400,7 @@
         echo $this->form()->closeTag($formPrize);
     endif;
     $formBlockAccount = $this->blockAccountForm;
-    $formBlockAccount->setAttribute('action', $this->url('frontend/zfcuser/blockaccount', array('channel' => $this->channel)));
+    $formBlockAccount->setAttribute('action', $this->frontendUrl('zfcuser/blockaccount', array('channel' => $this->channel)));
     $formBlockAccount->setAttribute('method', 'post');
     $emailElement = $formBlockAccount->get('identity');
     $emailElement->setValue($this->zfcUserIdentity()->getEmail());

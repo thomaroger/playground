@@ -2,7 +2,7 @@
 <?php
 $form = $this->loginForm;
 $form->prepare();
-$form->setAttribute('action', $this->url('frontend/zfcuser/ajaxlogin',array('channel' => $this->channel)));
+$form->setAttribute('action', $this->frontendUrl('zfcuser/ajaxlogin',array('channel' => $this->channel)));
 $form->setAttribute('method', 'post');
 $form->setAttribute('id', 'header-login');
 ?>
@@ -16,10 +16,10 @@ $form->setAttribute('id', 'header-login');
 </ul>
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="<?php echo $this->url('frontend/zfcuser/register', array('channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '') ?>"><?php echo $this->translate('Create an account'); ?></a></li>
+    <li><a href="<?php echo $this->frontendUrl('zfcuser/register', array('channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '') ?>"><?php echo $this->translate('Create an account'); ?></a></li>
     <li class="separator">/</li>
     <li class="dropdown">
-        <a href="<?php echo $this->url('frontend/zfcuser/register', array('channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '') ?>" class="dropdown-toggle" data-toggle="dropdown">
+        <a href="<?php echo $this->frontendUrl('zfcuser/register', array('channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '') ?>" class="dropdown-toggle" data-toggle="dropdown">
             <?php echo $this->translate('Log in'); ?>
             <b class="caret"></b>
         </a>
@@ -36,7 +36,7 @@ $form->setAttribute('id', 'header-login');
                         <div class="form-group">
                            <label class="sr-only" for="exampleInputPassword2"><?php echo $form->get('credential')->getAttribute('placeholder'); ?></label>
                             <?php echo $this->formInput($form->get('credential')->setAttributes(array('class' => 'form-control'))) ?>
-                            <a href="<?php echo $this->url('frontend/zfcuser/forgotpassword', array('channel' => $this->channel)) ?>">
+                            <a href="<?php echo $this->frontendUrl('zfcuser/forgotpassword', array('channel' => $this->channel)) ?>">
                                 <?php echo $this->translate('Forgot your password?');?>
                             </a>
                         </div>
@@ -53,10 +53,10 @@ $form->setAttribute('id', 'header-login');
                </div>
             </li>
             <li>
-                <!--a href="<?php echo $this->url('frontend/zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>" class="fbconnect-header">
+                <!--a href="<?php echo $this->frontendUrl('zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>" class="fbconnect-header">
                    <img src="<?php echo $this->frontendAssetPath('images/header/fb-connect.png') ?>" alt="Facebook Connect" />
                 </a-->
-                <a href="<?php echo $this->url('frontend/zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>" class="btn btn-primary" id="sign-in-google">Sign In with Facebook</a>
+                <a href="<?php echo $this->frontendUrl('zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>" class="btn btn-primary" id="sign-in-google">Sign In with Facebook</a>
             </li>
          </ul>
   </li>

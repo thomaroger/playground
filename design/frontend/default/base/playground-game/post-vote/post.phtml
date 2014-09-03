@@ -55,7 +55,7 @@ $data = array();foreach($this->post->getPostElements() as $element){
                     $form = $this->form;
                     $form->setAttribute(
                         'action',
-                        $this->url('frontend/postvote/post',
+                        $this->frontendUrl('postvote/post',
                             array(
                                 'id' => $this->game->getIdentifier(),
                                 'channel' => $this->channel,
@@ -72,7 +72,7 @@ $data = array();foreach($this->post->getPostElements() as $element){
                     </div>
                 <?php elseif(!$this->zfcUserIdentity() && ! $this->game->getVoteAnonymous()):?>
                     <div class="vote">
-                        <a href="<?php echo $this->url('frontend/zfcuser/register', array('channel' => $this->channel)) . '?redirect=' . $this->url('frontend/postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $this->post->getId())) ?>"> 
+                        <a href="<?php echo $this->frontendUrl('zfcuser/register', array('channel' => $this->channel)) . '?redirect=' . $this->frontendUrl('postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $this->post->getId())) ?>"> 
                             <?php echo $this->translate('You must be registered to vote'); ?>
                         </a>
                     </div>
@@ -89,7 +89,7 @@ $data = array();foreach($this->post->getPostElements() as $element){
     	                <?php elseif($this->zfcUserIdentity() ||  $this->game->getVoteAnonymous()):?>
     	                    <input type="image" src="<?php echo $this->frontendAssetPath('images/common/round-vote.png');?>" alt="<?php echo $this->translate('Vote'); ?>">
     	                <?php elseif(! $this->game->getVoteAnonymous()):?>
-    	                    <a href="<?php echo $this->url('frontend/zfcuser/register', array('channel' => $this->channel)) . '?redirect=' . $this->url('frontend/postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $this->post->getId())) ?>">
+    	                    <a href="<?php echo $this->frontendUrl('zfcuser/register', array('channel' => $this->channel)) . '?redirect=' . $this->frontendUrl('postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $this->post->getId())) ?>">
     	                       <img src="<?php echo $this->frontendAssetPath('images/common/round-vote.png');?>" />
                             </a>
     	                <?php endif;?>
@@ -112,7 +112,7 @@ $data = array();foreach($this->post->getPostElements() as $element){
                     <?php $formModeration->prepare(); ?>
                     <?php echo $this->form()->openTag($formModeration); ?>
                         <?php echo $this->formInput($formModeration->get('moderation')->setAttributes(array('class' => 'form-control'))); ?>
-                        <input type="hidden" name="link" value="<?php echo $this->url('frontend/postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $post->getId()))?>" />
+                        <input type="hidden" name="link" value="<?php echo $this->frontendUrl('postvote/post', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'post' => $post->getId()))?>" />
                         <input type="hidden" name="reportid" value="<?php echo $post->getId() ?>" />
                         <a href="#" class="btn btn-default btn-green alert-link">
                             <?php echo $this->translate('Report'); ?>
@@ -134,14 +134,14 @@ $data = array();foreach($this->post->getPostElements() as $element){
             
     <div class="clearfix">
         <div class="btn btn-default btn-arrow-right"<?php if ($this->isCtaActive):?> id="fb-play"<?php endif;?>>
-            <a href="<?php echo $this->url('frontend/postvote/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" class="arrow-right">
+            <a href="<?php echo $this->frontendUrl('postvote/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" class="arrow-right">
                 <span class="left">left</span>
                 <span class="center"><?php echo $this->translate('Participate'); ?></span>
                 <span class="right">right</span>
             </a>
         </div>
         <div class="btn btn-default btn-arrow-right">
-            <a href="<?php echo $this->url('frontend/postvote/list', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'filter' => $this->game->getPostDisplayMode()))?>" class="arrow-right">
+            <a href="<?php echo $this->frontendUrl('postvote/list', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel, 'filter' => $this->game->getPostDisplayMode()))?>" class="arrow-right">
                 <span class="left">left</span>
                 <span class="center"><?php echo $this->translate('See participants'); ?></span>
                 <span class="right">right</span>

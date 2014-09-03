@@ -11,8 +11,8 @@ $settings = array(
     /**
      * Bitly Account : A service for shortening url :)
      */
-    'bitlyUsername' => 'o_7t2s2bjmun',
-    'bitlyApiKey'   => 'R_335290ffb3f5fc08b45d3e0e6678c3db',
+    //'bitlyUsername' => 'o_7t2s2bjmun',
+    //'bitlyApiKey'   => 'R_335290ffb3f5fc08b45d3e0e6678c3db',
     'bitlyUrl'      => 'http://api.bit.ly/v3/shorten',
 
     //Used to create the open graph stuff

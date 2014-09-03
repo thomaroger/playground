@@ -81,7 +81,7 @@
                     <div id="terminer" class="text-center">
                         <div class="col-md-12">
                             <span class="btn btn-default">
-                                <a href="<?php echo $this->url('frontend/' . $this->nextGame->getClassType(), array('id' => $this->nextGame->getIdentifier(), 'channel' => $this->channel)); ?>">
+                                <a href="<?php echo $this->frontendUrl('' . $this->nextGame->getClassType(), array('id' => $this->nextGame->getIdentifier(), 'channel' => $this->channel)); ?>">
                                     <?php echo $this->translate('Play another Game'); ?>
                                 </a>
                             </span>
@@ -92,7 +92,7 @@
                         <!-- terminer -->
                         <div id="terminer">
                             <div class="col-md-12 text-center">
-                                <a class="btn btn-default btn-green" href="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/bounce', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel));?>">
+                                <a class="btn btn-default btn-green" href="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/bounce', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel));?>">
                                     <?php echo $this->translate('Finish'); ?>
                                 </a>
                             </div>
