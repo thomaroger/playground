@@ -142,7 +142,7 @@
 											<img src="<?php echo $this->serverUrl(); ?>/frontend/images/lahalle/emailing1/ca4.jpg" alt="captain america" border="0" width="120" height="68" />
 										</td>
 										<td width="250" style="font-size:0;padding:0 33px;">
-										<?php $gameclasstype = str_replace('/', '', $this->url('frontend/' . $this->game->getClassType(), array('channel' => $this->channel))); ?>
+										<?php $gameclasstype = str_replace('/', '', $this->frontendUrl('' . $this->game->getClassType(), array('channel' => $this->channel))); ?>
 											<a href="<?php echo $this->skinUrl . '/' . $gameclasstype . '/' . $this->game->getIdentifier();?>?key=<?php echo $this->secretKey ?>"><img src="<?php echo $this->serverUrl(); ?>/frontend/images/lahalle/emailing1/jouer.jpg" alt="jouer" border="0" width="250" height="68" /></a>
 										</td>
 										<td width="120" height="68" style="font-size:0;padding:0;">

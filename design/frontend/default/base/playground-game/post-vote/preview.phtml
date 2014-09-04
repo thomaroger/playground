@@ -38,7 +38,7 @@
                 </div>
                 
                 <div class="col-md-12 text-center clearfix">
-                    <a class="btn btn-default btn-green" href="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" class="btn btn-default modify">
+                    <a class="btn btn-default btn-green" href="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" class="btn btn-default modify">
                         <?php echo $this->translate('Modify'); ?>
                     </a>
                     <button type="submit" name="submitPost" value="" class="btn btn-default btn-green validate">
@@ -51,7 +51,7 @@
             
     <div class="clearfix">
         <div class="btn btn-default btn-arrow-right">
-            <a href="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/list', array('id' => $this->game->getIdentifier(), 'filter' => $this->game->getPostDisplayMode(), 'channel' => $this->channel))?>">
+            <a href="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/list', array('id' => $this->game->getIdentifier(), 'filter' => $this->game->getPostDisplayMode(), 'channel' => $this->channel))?>">
                 <span class="left">left</span>
                 <span class="center"><?php echo $this->translate('See participants'); ?></span>
                 <span class="right">right</span>

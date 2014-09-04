@@ -11,7 +11,7 @@ $form->prepare();
         <?php echo $this->formElementErrors()
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('title'))) ?>
-	</div>
+ 	</div>
 	<div class="form-group">
         <?php echo $this->formLabel($form->get('identifier')); ?>
         <?php echo $this->formInput($form->get(('identifier'))->setAttribute('class', 'form-control')); ?>
@@ -34,28 +34,28 @@ $form->prepare();
         <?php $today = new \DateTime('now');?>
         <?php $today = $today->format('d/m/Y');?>
     	<?php echo $this->formLabel($form->get('publicationDate')); ?>
-        <?php echo $this->formDateTime($form->get(('publicationDate'))->setAttribute('class', 'form-control date')); ?>
+        <?php echo $this->formDateTime($form->get(('publicationDate'))->setAttribute('class', 'form-control datepicker')); ?>
         <?php echo $this->formElementErrors()
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('publicationDate'))); ?>
 	</div>
 	<div class="form-group">
     	<?php echo $this->formLabel($form->get('startDate')); ?>
-        <?php echo $this->formDateTime($form->get(('startDate'))->setAttribute('class', 'form-control date')); ?>
+        <?php echo $this->formDateTime($form->get(('startDate'))->setAttribute('class', 'form-control datepicker')); ?>
         <?php echo $this->formElementErrors()
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('startDate'))); ?>
 	</div>
 	<div class="form-group">
     	<?php echo $this->formLabel($form->get('endDate')); ?>
-    	<?php echo $this->formDateTime($form->get(('endDate'))->setAttribute('class', 'form-control date')); ?>
+    	<?php echo $this->formDateTime($form->get(('endDate'))->setAttribute('class', 'form-control datepicker')); ?>
         <?php echo $this->formElementErrors()
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('endDate'))); ?>
 	</div>
 	<div class="form-group">
         <?php echo $this->formLabel($form->get('closeDate')); ?>
-    	<?php echo $this->formDateTime($form->get(('closeDate'))->setAttribute('class', 'form-control date')); ?>
+    	<?php echo $this->formDateTime($form->get(('closeDate'))->setAttribute('class', 'form-control datepicker')); ?>
         <?php echo $this->formElementErrors()
 						->setMessageOpenFormat('<div class="alert alert-danger">')
 						->setMessageCloseString('</div>')->render($form->get(('closeDate'))); ?>

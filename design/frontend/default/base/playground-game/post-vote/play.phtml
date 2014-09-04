@@ -2,7 +2,7 @@
 <?php
 $form = $this->form;
 $form->prepare();
-$form->setAttribute('action', $this->url('frontend/'. $this->game->getClassType() . '/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel)));
+$form->setAttribute('action', $this->frontendUrl(''. $this->game->getClassType() . '/play', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel)));
 ?>
 
 <?php $totalQuestions = count($this->questions);?>
@@ -53,7 +53,7 @@ $form->setAttribute('action', $this->url('frontend/'. $this->game->getClassType(
 			           </div>
 			         </div>
                 <?php elseif ($element instanceof Zend\Form\Element\File): ?>
-                    <div class="photo-file form-group clearfix" data-url="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/play/ajaxupload', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" data-canonical="<?php echo $this->url('frontend', array('channel' => $this->channel), array('force_canonical' => true)) ?>">
+                    <div class="photo-file form-group clearfix" data-url="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/play/ajaxupload', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" data-canonical="<?php echo $this->url('frontend', array('channel' => $this->channel), array('force_canonical' => true)) ?>">
                     	<label class="col-md-5">
 						    <?php echo ($element->getLabel()) ? $this->formLabel($element) . ' ' . $requiredContent :''; ?>
 						    <br/>
@@ -67,7 +67,7 @@ $form->setAttribute('action', $this->url('frontend/'. $this->game->getClassType(
                                 <img class="preview" src="<?php echo $this->basePath($element->getValue());?>"/>
                                 <a href="#"
                                     class="trash"
-                                    data-delete="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/play/ajaxdelete', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>"
+                                    data-delete="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/play/ajaxdelete', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>"
                                     data-name="<?php echo $element->getName() ?>">
                                     <img src="<?php echo $this->frontendAssetPath('images/common/trash.png');?>" alt="Supprimer" />
                                 </a>
@@ -99,7 +99,7 @@ $form->setAttribute('action', $this->url('frontend/'. $this->game->getClassType(
             <?php echo $this->form()->closeTag() ?>
             <!-- FORM HANDLER LIVE UPLOAD PHOTO -->
             <form
-               action="<?php echo $this->url('frontend/photocontestcreate', array('channel' => $this->channel)) ?>"
+               action="<?php echo $this->frontendUrl('photocontestcreate', array('channel' => $this->channel)) ?>"
                enctype="multipart/form-data"
                target="upload_iframe"
                id="uploadform"
@@ -110,7 +110,7 @@ $form->setAttribute('action', $this->url('frontend/'. $this->game->getClassType(
                 
         <div class="clearfix">
             <div class="btn btn-default btn-arrow-right">
-                <a href="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/list', array('id' => $this->game->getIdentifier(), 'filter' => $this->game->getPostDisplayMode(), 'channel' => $this->channel))?>">
+                <a href="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/list', array('id' => $this->game->getIdentifier(), 'filter' => $this->game->getPostDisplayMode(), 'channel' => $this->channel))?>">
                     <span class="left">left</span>
                     <span class="center"><?php echo $this->translate('See participants'); ?></span>
                     <span class="right">right</span>

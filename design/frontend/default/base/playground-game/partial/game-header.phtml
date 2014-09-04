@@ -38,12 +38,12 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <?php echo $this->partial('playground-game/partial/share.phtml', array( 'color' => 'grey', 'game'=>$this->game,'url'=>$this->url('frontend/' . $game->getClassType(), array('id' => $this->game->getIdentifier(), 'channel' => $this->channel), array('force_canonical' => true))));?>
+                <?php echo $this->partial('playground-game/partial/share.phtml', array( 'color' => 'grey', 'game'=>$this->game,'url'=>$this->frontendUrl('' . $game->getClassType(), array('id' => $this->game->getIdentifier(), 'channel' => $this->channel), array('force_canonical' => true))));?>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <a id="rules" href="<?php echo $this->url('frontend/'. $this->game->getClassType() . '/terms', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" target="_blank">
+                <a id="rules" href="<?php echo $this->frontendUrl(''. $this->game->getClassType() . '/terms', array('id' => $this->game->getIdentifier(), 'channel' => $this->channel))?>" target="_blank">
                     <?php echo $this->translate('Rules'); ?>
                 </a>
             </div>

@@ -45,7 +45,7 @@
 				    <?php echo $this->translate('Use Facebook connect')?>
 				</p class="col-md-8">
 				<p>
-				    <a href="<?php echo $this->url('frontend/zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>">
+				    <a href="<?php echo $this->frontendUrl('zfcuser/register',array('socialnetwork' => 'facebook', 'channel' => $this->channel)) . ($this->redirect ? '?redirect='.$this->redirect : '');?>">
 			           <img src="<?php echo $this->frontendAssetPath('images/common/fb-connect.png') ?>" alt="Facebook Connect" />
 			        </a>
 				</p>
