@@ -10,4 +10,4 @@
         <?php echo $this->partial('playground-cms/page/partial/page.phtml', array('page' => $item, 'channel' => $this->channel)) ?>
     <?php endif;?>
 <?php endforeach;?>
-<?php echo $this->paginationControl($this->items, 'Sliding', 'playground-design/index/partial/pagination.phtml', array('url' => 'frontend/pagination')); ?>
+<?php echo $this->paginationControl($this->items, 'Sliding', 'playground-game/partial/pagination.phtml', array('url' => 'pagination')); ?>
