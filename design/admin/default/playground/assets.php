@@ -51,7 +51,7 @@ return array(
                     /**
                      * MAIN JS FILES
                      */
-                    'playground_js' => array(
+                    'head_playground_js' => array(
                         'assets' => array(
                             'jquery-1.10.2.min.js'          => 'js/lib/jquery-1.10.2.min.js',
                             //'jquery-1.10.2.min.map'          => 'js/lib/jquery-1.10.2.min.map',
@@ -61,7 +61,7 @@ return array(
                         ),
                         'filters' => array(),
                         'options' => array(
-                            'output' => 'zfcadmin/js/script_playground'
+                            'output' => 'zfcadmin/js/head_script_playground'
                         ),
                     ),
                     
@@ -153,7 +153,7 @@ return array(
         'routes' => array(
             'admin.*' => array(
                 '@playground_css',
-                '@playground_js',
+                '@head_playground_js',
             ),
             'admin' => array(
                 '@playground_stats_css',
