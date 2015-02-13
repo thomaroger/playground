@@ -7,7 +7,7 @@ return array(
         //'OcraCachedViewResolver',
 		'ZendDeveloperTools',
         'Jhu\ZdtLoggerModule',
-        ///'PlaygroundTemplateHint',
+        'PlaygroundTemplateHint',
     	'AsseticBundle',
 		'ZfcBase',
         'ZfcUser',
