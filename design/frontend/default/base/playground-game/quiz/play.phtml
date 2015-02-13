@@ -21,6 +21,7 @@ $form->setAttribute('action', $this->frontendUrl('quiz/play', array('id' => $thi
 	        <div class="page col-md-10" id="<?php echo $groupFieldset->getName()?>">
                 <?php foreach ($groupFieldset as $element): ?>
                 <?php $question = $this->questions[$i];?>
+                <?php if(empty($question)) continue; ?>
     			<div>
     				<div class="heading">
                         Question <?php echo $i+1; ?>
@@ -96,11 +97,7 @@ $form->setAttribute('action', $this->frontendUrl('quiz/play', array('id' => $thi
 	                            <?php echo $this->formTextarea($element); ?>
 	                        <?php endif;?>
                             <?php if ( ! $element instanceof Zend\Form\Element\Textarea): ?>
-	                        <!-- <div class="explanation">
-                                <?php foreach ($element->getvalueOptions() as $answerLabel) :?>
-                                    <span><?php echo $this->explanations[$answerLabel]; ?></span>
-                                <?php endforeach; ?>  
-                            </div> -->
+	                     
                             <?php endif;?>
 							<?php if ($element->getMessages()) : echo '<div class="quiz-error">Merci de répondre à la question.</div>'; endif; ?>
 	                    <?php endif;?>
